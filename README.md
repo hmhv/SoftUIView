@@ -65,7 +65,7 @@ softUIView.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
 
 ### Example
 
-for more infomation, check (ViewController.swift)](https://raw.githubusercontent.com/hmhv/SoftUIView/master/Example/Example/ViewController.swift) of Example project.
+for more infomation, check [ViewController.swift](https://raw.githubusercontent.com/hmhv/SoftUIView/master/Example/Example/ViewController.swift) of Example project.
 
 ![SoftUIView](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/softuiview.gif)
 
