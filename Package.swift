@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "SoftUIView",
             dependencies: []
-            path: "Sources")
+            path: "Sources"),
 ),
     ]
 )
