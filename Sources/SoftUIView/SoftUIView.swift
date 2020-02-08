@@ -150,14 +150,14 @@ private extension SoftUIView {
 
     func createSubLayers() {
 
-        darkOuterShadowLayer = {
-            let shadowLayer = createOuterShadowLayer(shadowColor: darkShadowColor, shadowOffset: shadowOffset)
+        lightOuterShadowLayer = {
+            let shadowLayer = createOuterShadowLayer(shadowColor: lightShadowColor, shadowOffset: shadowOffset.inverse)
             layer.addSublayer(shadowLayer)
             return shadowLayer
         }()
 
-        lightOuterShadowLayer = {
-            let shadowLayer = createOuterShadowLayer(shadowColor: lightShadowColor, shadowOffset: shadowOffset.inverse)
+        darkOuterShadowLayer = {
+            let shadowLayer = createOuterShadowLayer(shadowColor: darkShadowColor, shadowOffset: shadowOffset)
             layer.addSublayer(shadowLayer)
             return shadowLayer
         }()
