@@ -232,7 +232,6 @@ private extension SoftUIView {
         backgroundLayer.cornerRadius = cornerRadius
 
         darkOuterShadowLayer.path = createOuterShadowPath()
-
         lightOuterShadowLayer.path = createOuterShadowPath()
 
         darkInnerShadowLayer.path = createInnerShadowPath()

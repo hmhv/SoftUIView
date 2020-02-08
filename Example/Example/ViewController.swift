@@ -71,6 +71,7 @@ extension ViewController {
 
     func setupBackwardView() {
         backwardView.addTarget(self, action: #selector(backwardTapHandler), for: .touchUpInside)
+        backwardView.cornerRadius = 30
 
         let icon = UIImage(systemName: "backward.fill")
         let imageView = UIImageView(image: icon)
@@ -84,6 +85,7 @@ extension ViewController {
 
     func setupForwardView() {
         forwardView.addTarget(self, action: #selector(forwardTapHandler), for: .touchUpInside)
+        forwardView.cornerRadius = 30
 
         let icon = UIImage(systemName: "forward.fill")
         let imageView = UIImageView(image: icon)
@@ -98,7 +100,7 @@ extension ViewController {
     func setupPlayView() {
         playView.type = .toggleButton
         playView.addTarget(self, action: #selector(playTapHandler), for: .touchDown)
-
+        playView.cornerRadius = 30
         let playIcon = UIImage(systemName: "play.fill")
         let playImageView = UIImageView(image: playIcon)
         playImageView.translatesAutoresizingMaskIntoConstraints = false
