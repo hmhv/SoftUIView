@@ -2,6 +2,7 @@
 ![SoftUIView](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/softuiview.png)
 
 [![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)](https://github.com/hmhv/SoftUIView)
+[![Cocoapods](https://img.shields.io/cocoapods/v/SoftUIView.svg)](https://cocoapods.org/pods/SoftUIView)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-11.3-blue.svg)](https://developer.apple.com/xcode)
@@ -18,7 +19,14 @@ SoftUIView is a [Soft-UI (Neumorphism)](https://uxdesign.cc/neumorphism-in-user-
 
 ## Installation
 
+### CocoaPods
+
+```
+pod 'SoftUIView'
+```
+
 ### Swift Package Manager
+
 Open your Xcode project, select File -> Swift Packages -> Add Package Dependency.... and type `https://github.com/hmhv/SoftUIView.git`.
 
 
