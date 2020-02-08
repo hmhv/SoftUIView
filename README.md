@@ -24,11 +24,9 @@ Open your Xcode project, select File -> Swift Packages -> Add Package Dependency
 
 ### Manually 
 
-Add the <a href="https://github.com/hmhv/SoftUIView/tree/master/Sources/SoftUIView">SoftUIView</a> folder to your Xcode project to use all extensions, or a specific extension.</p>
+Add the <a href="https://github.com/hmhv/SoftUIView/tree/master/Sources/SoftUIView">SoftUIView</a> folder to your Xcode project to use SoftUIView.</p>
 
 ## Usage
-
-![SoftUIView](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/softuiview.gif)
 
 ### add soft ui view
 
@@ -51,7 +49,7 @@ softUIView.shadowOffset = .init(width: -6, height: 6)
 softUIView.shadowRadius = 10
 ```
 
-![add soft ui view](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/customview.png.png)
+![add soft ui view](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/customview.png)
 
 ### handle event 
 
@@ -64,6 +62,12 @@ softUIView.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
     // code
 }
 ```
+
+### Example
+
+for more infomation, check (ViewController.swift)](https://raw.githubusercontent.com/hmhv/SoftUIView/master/Example/Example/ViewController.swift) of Example project.
+
+![SoftUIView](https://raw.githubusercontent.com/hmhv/SoftUIView/master/assets/softuiview.gif)
 
 ## License
 
