@@ -11,7 +11,7 @@ public enum SoftUIViewType: Int {
     case normal
 }
 
-public class SoftUIView: UIControl {
+open class SoftUIView: UIControl {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,64 +23,64 @@ public class SoftUIView: UIControl {
         createSubLayers()
     }
 
-    public func setContentView(_ contentView: UIView?,
-                               selectedContentView: UIView? = nil,
-                               selectedTransform: CGAffineTransform? = CGAffineTransform.init(scaleX: 0.95, y: 0.95)) {
+    open func setContentView(_ contentView: UIView?,
+                             selectedContentView: UIView? = nil,
+                             selectedTransform: CGAffineTransform? = CGAffineTransform.init(scaleX: 0.95, y: 0.95)) {
 
         resetContentView(contentView,
                          selectedContentView: selectedContentView,
                          selectedTransform: selectedTransform)
     }
 
-    public var type: SoftUIViewType = .pushButton {
+    open var type: SoftUIViewType = .pushButton {
         didSet { updateShadowLayers() }
     }
 
-    public var mainColor: CGColor = SoftUIView.defalutMainColorColor {
+    open var mainColor: CGColor = SoftUIView.defalutMainColorColor {
         didSet { updateMainColor() }
     }
 
-    public var darkShadowColor: CGColor = SoftUIView.defalutDarkShadowColor {
+    open var darkShadowColor: CGColor = SoftUIView.defalutDarkShadowColor {
         didSet { updateDarkShadowColor() }
     }
 
-    public var lightShadowColor: CGColor = SoftUIView.defalutLightShadowColor {
+    open var lightShadowColor: CGColor = SoftUIView.defalutLightShadowColor {
         didSet { updateLightShadowColor() }
     }
 
-    public var shadowOffset: CGSize = SoftUIView.defalutShadowOffset {
+    open var shadowOffset: CGSize = SoftUIView.defalutShadowOffset {
         didSet { updateShadowOffset() }
     }
 
-    public var shadowOpacity: Float = SoftUIView.defalutShadowOpacity {
+    open var shadowOpacity: Float = SoftUIView.defalutShadowOpacity {
         didSet { updateShadowOpacity() }
     }
 
-    public var shadowRadius: CGFloat = SoftUIView.defalutShadowRadius {
+    open var shadowRadius: CGFloat = SoftUIView.defalutShadowRadius {
         didSet { updateShadowRadius() }
     }
 
-    public var cornerRadius: CGFloat = SoftUIView.defalutCornerRadius {
+    open var cornerRadius: CGFloat = SoftUIView.defalutCornerRadius {
         didSet { updateSublayersShape() }
     }
 
-    public override var bounds: CGRect {
+    open override var bounds: CGRect {
         didSet { updateSublayersShape() }
     }
 
-    public override var isSelected: Bool {
+    open override var isSelected: Bool {
         didSet {
             updateShadowLayers()
             updateContentView()
         }
     }
 
-    public override var backgroundColor: UIColor? {
+    open override var backgroundColor: UIColor? {
         get { .clear }
         set { }
     }
 
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch type {
         case .pushButton:
             isSelected = true
@@ -92,7 +92,7 @@ public class SoftUIView: UIControl {
         super.touchesBegan(touches, with: event)
     }
 
-    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch type {
         case .pushButton:
             isSelected = isTracking
@@ -102,7 +102,7 @@ public class SoftUIView: UIControl {
         super.touchesMoved(touches, with: event)
     }
 
-    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch type {
         case .pushButton:
             isSelected = false
@@ -112,7 +112,7 @@ public class SoftUIView: UIControl {
         super.touchesEnded(touches, with: event)
     }
 
-    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch type {
         case .pushButton:
             isSelected = false
