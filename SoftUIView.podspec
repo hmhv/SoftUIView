@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SoftUIView'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.summary = 'SoftUIView is a Soft-UI (Neumorphism) view written in Swift.'
   s.description = 'SoftUIView is a Soft-UI (Neumorphism) view written in Swift. check https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6 for more infomation.'
   s.license = { type: 'MIT', file: 'LICENSE' }
