@@ -11,6 +11,7 @@ public enum SoftUIViewType: Int {
     case normal
 }
 
+@objcMembers
 open class SoftUIView: UIControl {
 
     public override init(frame: CGRect) {
@@ -21,6 +22,24 @@ open class SoftUIView: UIControl {
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
         createSubLayers()
+    }
+
+    open func setContentView(_ contentView: UIView?) {
+        resetContentView(contentView)
+    }
+
+    open func setContentView(_ contentView: UIView?,
+                              selectedContentView: UIView?) {
+        resetContentView(contentView,
+                         selectedContentView: selectedContentView,
+                         selectedTransform: nil)
+    }
+
+    open func setContentView(_ contentView: UIView?,
+                             selectedTransform: CGAffineTransform) {
+        resetContentView(contentView,
+                         selectedContentView: nil,
+                         selectedTransform: selectedTransform)
     }
 
     open func setContentView(_ contentView: UIView?,
